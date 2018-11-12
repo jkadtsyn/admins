@@ -106,7 +106,7 @@ void next_step()
 	{
 		cout << "You're looser! \n";
 		ofstream F;
-		F.open("E:\\09.11.18(rehcfx)\\Resultat.txt", ios_base::app);
+		F.open("Resultat.txt", ios_base::app);
 		cout << "score " << score << endl;
 		F << name << " = score: " << score << endl;
 		F.close();
@@ -166,6 +166,7 @@ int main()
 	cout << "|                 |" << endl;
 	cout << "-------------------" << endl;
 	cin >> plays;
+	system("cls");
 	if (plays == 'g')
 	{
 		standart_settings();
@@ -188,11 +189,4 @@ int main()
 		cout << "Good bay" << endl;
 		exit(0);
 	}
-
-	ofstream F;
-	F.open("E:\\09.11.18(rehcfx)\\Resultat.txt");
-	cout << "score" << score;
-	F << "score" << score;
-	F.close();
-	_getch();
 }
