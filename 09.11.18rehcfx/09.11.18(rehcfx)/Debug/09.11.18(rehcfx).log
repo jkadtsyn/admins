@@ -1,0 +1,15 @@
+﻿Build started 09.11.2018 20:26:36.
+     1>Project "E:\09.11.18(rehcfx)\09.11.18(rehcfx)\09.11.18(rehcfx).vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>e:\09.11.18(rehcfx)\09.11.18(rehcfx)\source.cpp(125): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>e:\09.11.18(rehcfx)\09.11.18(rehcfx)\source.cpp(175): warning C4805: '==' : unsafe mix of type 'int' and type 'bool' in operation
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\09.11.18(rehcfx)\Debug\09.11.18(rehcfx).exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\09.11.18(rehcfx)\Debug\09.11.18(rehcfx).pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\09.11.18(rehcfx)\Debug\09.11.18(rehcfx).lib" /MACHINE:X86 Debug\Source.obj
+         09.11.18(rehcfx).vcxproj -> E:\09.11.18(rehcfx)\Debug\09.11.18(rehcfx).exe
+     1>Done Building Project "E:\09.11.18(rehcfx)\09.11.18(rehcfx)\09.11.18(rehcfx).vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.84
