@@ -8,18 +8,22 @@ clear
 menu(){ 
  echo -e "$GREEN 1) Show all disks \n";
  echo -e " 2) Show disk space \n";
- echo -e " 3) Add new disk \n";
- echo -e " 4) Format \n";
- echo -e " 5) Mount disk \n";
- echo -e " 6) exit $END \n";
+ echo -e " 3) Show FSTab \n";
+ echo -e " 4) Add new disk \n";
+ echo -e " 5) Format \n";
+ echo -e " 6) Mount disk \n";
+ echo -e " 7) Save Disk \n";
+ echo -e " 8) exit $END \n";
  read x
  case $x in
 	1)ShowDisk;;
 	2)ShowDiskSpace;;
-	3)AddDiskNew;;
-	4)FormatDisk;;
-	5)MountDisk;;
-	6)exit 0; ;;
+	3)ShowFsTab;;
+	4)AddDiskNew;;
+	5)FormatDisk;;
+	6)MountDisk;;
+	7)SaveDisk;;
+	8)exit 0; ;;
 
  esac
 }
@@ -34,6 +38,13 @@ menu
 ShowDiskSpace(){
 clear
 echo -e "`df -Th` \n $RED ---------- $END"
+sleep 1;
+menu
+}
+
+ShowFsTab(){
+clear
+echo -e "`cat /etc/fstab` \n $RED ---------- $END"
 sleep 1;
 menu
 }
@@ -92,7 +103,22 @@ case $what in
 esac
 }
 
-
+SaveDisk(){
+clear
+echo -e "`ls -l /dev/sd*` \n $RED --- $END"
+sleep 1
+echo -e "`df -Th` \n $RED --------- $END"
+sleep 1
+echo -e "$GREEN Enter disk: $END"
+read disk
+echo -e "$GREEN Enter dir: $END"
+read dir
+echo -e "\n"
+echo -e "/dev/$disk $dir ext4 defaults 0 0" >> /etc/fstab
+cat /etc/fstab | grep $disk
+sleep 1;
+menu
+}
 
 
 
